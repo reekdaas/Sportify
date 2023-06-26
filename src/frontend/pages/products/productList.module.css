@@ -1,0 +1,15 @@
+.mainContainer {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  padding-right: 1rem;
+  background-color: var(--clr-grey-4);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  z-index: 1;
+  background-color: var(--clr-grey-4);
+}

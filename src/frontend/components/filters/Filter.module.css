@@ -1,0 +1,74 @@
+.filterContainer {
+  box-shadow: 0 0 10px var(--light-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  padding: 1.5rem 2rem;
+  width: 16rem;
+  font-size: 1.25rem;
+  background-color: var(--clr-grey-5);
+  max-height: 110vh;
+  border-bottom-right-radius: 0.5rem;
+  accent-color: var(--clr-grey-1);
+  color: #1f1e1edc;
+  font-weight: 800;
+}
+.filterHeading {
+  margin: 0;
+}
+
+.filterHead {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.filterBtn {
+  border: 1px solid var(--clr-grey-8);
+  text-transform: uppercase;
+  padding: 0.5rem;
+  background: #455eb5;
+  font-weight: 600;
+  border-radius: 0.25rem;
+}
+.filterBtn:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}
+
+.filterCategory,
+.filterSorting,
+.filterRatings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.categoryListItem,
+.ratingListItem,
+.filterSortingItem {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filterPricecontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceRange {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterPrice {
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+}

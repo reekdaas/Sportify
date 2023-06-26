@@ -1,0 +1,51 @@
+.orderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: var(--dark-shadow);
+  height: fit-content;
+  margin: 1rem 0;
+  min-width: 23rem;
+  padding: 1rem 2rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 6rem;
+}
+
+.orderContainer > h2 {
+  background-color: var(--clr-grey-7);
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+}
+
+.orderSummaryRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.25rem;
+  border: 2px solid #ccc;
+  margin: 0.25rem 0;
+}
+
+.orderSummaryRow > p {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.orderBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--clr-grey-4);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.1s linear;
+}
+
+.orderBtn:hover {
+  background-color: var(--clr-primary-1);
+}

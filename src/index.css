@@ -1,13 +1,99 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #f79327;
+  --clr-primary-1: #453227;
+  --clr-primary-2: #5f4435;
+  --clr-primary-3: #795744;
+  --clr-primary-4: #936a53;
+
+  --clr-primary-5: #ab7a5f;
+
+  --clr-primary-6: hsl(22, 31%, 60%);
+  --clr-primary-7: #c5a491;
+  --clr-primary-8: hwb(20 66% 18%);
+  --clr-primary-9: hwb(22 75% 13%);
+  --clr-primary-10: #eaded7;
+
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: #bcccdc;
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: var(--clr-grey-8);
+  width: 100vw;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color);
+}
+
+.btn {
+  text-transform: uppercase;
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-10);
+  padding: 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 400;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  border-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.link-active {
+  background-color: #455eb5;
+}
+.link-active > span {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.disabled-btn {
+  cursor: not-allowed;
+}
+
+.inCartBtn {
+  background-color: var(--clr-green-dark);
 }

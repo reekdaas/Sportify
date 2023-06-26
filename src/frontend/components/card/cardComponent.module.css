@@ -1,0 +1,141 @@
+.card {
+  position: relative;
+  width: 16rem;
+  height: 20rem;
+  background: #7474bf;
+  background: -webkit-linear-gradient(to right, #348ac7, #7474bf);
+  background: linear-gradient(to right, #348ac7, #7474bf);
+
+  color: #010101;
+  border-radius: 1rem;
+  border: 0.1rem solid transparent;
+  overflow: hidden;
+  box-shadow: 0 0.2rem 0.6rem #0003;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+  border: 0.1rem solid var(--primary-color);
+  transform: scale(1.05);
+}
+
+.cardContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+}
+
+.cardImage,
+.cardTitle {
+  transform: translateY(4rem);
+  transition: 0.5s ease-in-out;
+}
+
+.cardImage {
+  width: auto;
+  height: 10rem;
+}
+
+.cardTitle {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  transition-delay: 0.1s;
+}
+
+.cardBody,
+.cardFooter {
+  transform: translateY(8rem);
+  transition: 0.5s ease-in-out;
+}
+
+.cardBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition-delay: 0.2s;
+}
+
+.card:hover .cardImage,
+.card:hover .cardTitle,
+.card:hover .cardBody,
+.card:hover .cardFooter {
+  transform: translateY(0);
+}
+
+.cardFooter {
+  width: 100%;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  transition-delay: 0.3s;
+}
+
+.cardPrice {
+  font: bolder 1.5rem sans-serif;
+}
+
+.btnCard {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0.5rem;
+  background-color: #455eb5;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  border-style: none;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  /* cursor: pointer; */
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.1s linear;
+}
+
+.btnCard:hover {
+  cursor: pointer;
+}
+
+/* .disabledBtn {
+  cursor: not-allowed;
+} */
+
+.disabledCard {
+  cursor: not-allowed;
+  background-color: #100f0f;
+  color: var(--secondary-color-one);
+  opacity: 0.55;
+  position: relative;
+}
+
+.disabledCard > button img {
+  cursor: not-allowed;
+}
+
+.outOfStock {
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-red-dark);
+  color: #fff;
+
+  z-index: 100;
+}
+
+.inWishlistBtn {
+  background-color: var(--clr-red-light);
+}

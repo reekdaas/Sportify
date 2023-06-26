@@ -1,0 +1,57 @@
+.checkOutCardContainer {
+  display: flex;
+  flex-direction: column;
+  height: 28rem;
+  width: 20rem;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: var(--dark-shadow);
+}
+
+.orderListHeading,
+.priceDetailsHeading {
+  font-size: 1rem;
+  color: var(--clr-primary-1);
+  background-color: #ddd;
+  padding: 0.25rem 0.5rem;
+}
+
+.orderListDetails,
+.priceDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.containerRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+}
+
+.containerRow > p {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.checkOutBtn {
+  padding: 1.1rem 1rem;
+  /* margin: 0.5rem 0 0; */
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+
+  cursor: pointer;
+  background-color: var(--clr-grey-4);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.1s linear;
+}
+.checkOutBtn:hover {
+  background-color: var(--clr-primary-1);
+}
+
+.warningText {
+  color: var(--clr-red-dark);
+}

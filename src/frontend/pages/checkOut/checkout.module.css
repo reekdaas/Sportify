@@ -1,0 +1,18 @@
+.checkoutPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: var(--clr-grey-3);
+}
+.checkoutHeader {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.checkoutContent {
+  display: flex;
+  gap: 3rem;
+  /* justify-content: space-around; */
+}

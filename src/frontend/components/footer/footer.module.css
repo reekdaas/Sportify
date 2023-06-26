@@ -1,0 +1,42 @@
+.footer {
+  height: 8rem;
+  background: #2e2e2e;
+  color: #fff;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+span {
+  color: #f79327;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.footerSocials {
+  display: flex;
+  justify-content: space-evenly;
+  width: 15%;
+}
+
+.exploreLink {
+  font-size: 2rem;
+  /* color: #010101; */
+  position: relative;
+  color: var(--text-color);
+  transition: all 0.1s linear;
+  font-weight: 700;
+}
+.exploreLink:hover {
+  color: #455eb5;
+}
+
+.footer > h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.footer > h3:hover {
+  color: var(--primary-color);
+}

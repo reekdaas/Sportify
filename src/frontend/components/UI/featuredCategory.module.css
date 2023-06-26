@@ -1,0 +1,49 @@
+.featuredSection {
+  height: 25rem;
+  width: 100vw;
+  background-color: var(--clr-grey-4);
+}
+
+a {
+  text-decoration: none;
+}
+
+.featuredHeading {
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 0.75rem;
+}
+
+.featuredContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.featureCard {
+  height: 10rem;
+  width: 10rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--clr-grey-4);
+  font-size: 1.25rem;
+  transition: 0.3s ease-in-out all;
+  box-shadow: var(--light-shadow);
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: capitalize;
+  border-radius: 50%;
+}
+.featureCard:hover {
+  scale: 1.1;
+  box-shadow: var(--dark-shadow);
+}
+
+.featureCardTitle {
+  margin: 3rem auto;
+  /* color: var(--primary-color); */
+  color: #fff;
+  text-align: center;
+}

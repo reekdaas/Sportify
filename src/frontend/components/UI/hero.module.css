@@ -1,0 +1,60 @@
+.mainImg {
+  width: 100vw;
+  height: 550px;
+  position: relative;
+  border-radius: var(--radius);
+  display: block;
+  aspect-ratio: 16/9;
+}
+
+.heroContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  z-index: 3;
+}
+
+.heroContent {
+  padding: 2rem;
+  color: var(--primary-color);
+}
+
+.heroContent h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.heroBtn {
+  text-transform: uppercase;
+  background: #455eb5;
+  color: var(--clr-primary-10);
+  padding: 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  border-color: transparent;
+}
+
+.heroBtn:hover {
+  background-color: var(--clr-primary-1);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 110px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 40vh;
+  width: 50vw;
+  margin: 5rem auto;
+}

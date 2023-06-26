@@ -1,0 +1,30 @@
+.wishlistContainer {
+  background-color: var(--clr-grey-3);
+  margin: 0 auto;
+  max-width: 120rem;
+  text-align: center;
+  min-height: 80vh;
+  width: 100%;
+  padding: 1rem 0rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.emptyWishlist {
+  font-size: 2rem;
+  text-align: center;
+}
+.wishlistCardsContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem 3rem;
+}
+
+.wishlistHeading > h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}

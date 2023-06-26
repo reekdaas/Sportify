@@ -1,0 +1,52 @@
+.linkContainer {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+  align-items: center;
+}
+.exploreLink {
+  font-size: 2rem;
+  color: #010101;
+  position: relative;
+  color: var(--text-color);
+  transition: all 0.1s linear;
+  font-weight: 700;
+}
+.exploreLink:hover {
+  color: #09143e;
+}
+
+.itemCount {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  background-color: #455eb5;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 12px;
+}
+.exploreBtn {
+  text-transform: uppercase;
+  background: #455eb5;
+  color: var(--clr-primary-10);
+  padding: 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  border-color: transparent;
+}
+
+.exploreBtn:hover {
+  background-color: var(--clr-primary-1);
+}

@@ -1,0 +1,86 @@
+.ItemCard {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  display: flex;
+  gap: 1rem;
+  margin: 1rem auto;
+  max-width: 30rem;
+  padding: 1rem 2rem;
+}
+
+.cardImage {
+  display: flex;
+  height: 15rem;
+}
+
+.cardImage > img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.cardDetails {
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.cartItemQuantity {
+  padding: 0.5rem;
+  display: flex;
+}
+
+.cartItemQuantityValue {
+  align-items: center;
+  border: 1px solid #888;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  padding: 2px 0;
+  width: 4rem;
+  color: #010;
+}
+.cartItemQuantityBtn {
+  border: 1px solid #888;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 2rem;
+  padding: 0.2rem 0.5rem rem;
+
+  width: 2rem;
+}
+
+.cartButtons {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0;
+}
+
+.cartBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--clr-grey-4);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.1s linear;
+}
+
+.cartBtn:hover {
+  background-color: var(--clr-primary-1);
+}
+
+.disabledBtn {
+  cursor: not-allowed;
+}
+
+.cardDetails > h2,
+h3 {
+  margin: 0 0 0.25rem;
+}

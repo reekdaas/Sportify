@@ -1,0 +1,22 @@
+.addressCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid orange;
+  cursor: pointer;
+  margin: 0.5rem;
+  box-shadow: var(--light-shadow);
+}
+
+.addressCardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: 20rem;
+}
+
+.addressCard > input {
+  cursor: pointer;
+}

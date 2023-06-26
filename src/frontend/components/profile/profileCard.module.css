@@ -1,0 +1,35 @@
+.profileCard {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profileCard > h2 {
+  font-weight: 700;
+}
+
+.profileCardvalue {
+  font-weight: 400;
+  color: #010;
+}
+
+.logoutbtn {
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--clr-grey-2);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.1s linear;
+}
+
+.logoutbtn:hover {
+  background-color: var(--clr-primary-1);
+}

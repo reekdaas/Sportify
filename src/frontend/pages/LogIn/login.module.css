@@ -1,0 +1,55 @@
+.authPage {
+  display: grid;
+  height: 66vh;
+
+  place-items: center;
+}
+
+.authLogIn {
+  border: 1px solid rgb(207, 207, 207);
+  width: 25rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--clr-grey-8);
+  max-width: 40rem;
+  font-weight: 700;
+}
+
+.formPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.signInput,
+.signInBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0.5rem 0.25rem;
+}
+.signInput input {
+  width: 100%;
+  padding: 1rem;
+}
+
+.signBtn {
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--clr-grey-4);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.1s linear;
+}
+
+.signBtn:hover {
+  background-color: var(--clr-primary-1);
+}

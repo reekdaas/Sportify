@@ -1,0 +1,21 @@
+.featuredContainer {
+  /* height: 30rem; */
+  width: 100vw;
+  background-color: var(--clr-grey-4);
+  box-shadow: var(--dark-shadow);
+}
+
+.featuredHeading {
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 0.75rem;
+}
+
+.featuredCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0.5rem;
+}
