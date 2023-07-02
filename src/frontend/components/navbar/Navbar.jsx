@@ -9,7 +9,7 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
-  const { filterProductState, filterProductDispatch } = useFilterContext();
+  const { filterProductDispatch } = useFilterContext();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,7 +27,7 @@ export default function Navbar() {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(searchQuery);
+    // console.log(searchQuery);
     navigate("/products");
     filterProductDispatch({ type: "FILTER_BY_SEARCH", payload: searchQuery });
   };

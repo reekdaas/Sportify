@@ -20,7 +20,7 @@ export default function Login() {
   const inputChangeHandler = (e) => {
     const { name, value } = e.target;
     setLogInData({ ...logInData, [name]: value });
-    console.log(logInData);
+    // console.log(logInData);
   };
   const handleGuestSubmit = (e) => {
     e.preventDefault();

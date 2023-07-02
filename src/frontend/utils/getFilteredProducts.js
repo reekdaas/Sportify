@@ -6,7 +6,7 @@ const sortBySearchQuery = (allProducts, { filterBySearch }) => {
 };
 
 const sortByPriceRange = (allProducts, { filterByPrice }) => {
-  if (filterByPrice?.length == 0) return allProducts;
+  if (filterByPrice?.length === 0) return allProducts;
 
   return allProducts.filter(({ price }) => price > filterByPrice);
 };

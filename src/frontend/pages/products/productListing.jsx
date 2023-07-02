@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import { Filter } from "../../components";
 import { useFilterContext, useProductContext } from "../../context";
 import getFilteredProducts from "../../utils/getFilteredProducts";
