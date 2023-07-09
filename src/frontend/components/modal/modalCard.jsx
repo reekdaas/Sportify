@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import styles from "./modalCard.module.css";
 import { v4 as uuid } from "uuid";
