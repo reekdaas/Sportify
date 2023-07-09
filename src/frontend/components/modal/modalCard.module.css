@@ -9,9 +9,10 @@
   background-color: #fff;
   border: none;
   border-radius: 0.3rem;
-
   margin: 2rem 0rem;
   padding: 1rem;
+  background-color: #1a2421;
+  border-radius: 1rem;
 }
 
 .modalOverlay {
@@ -22,13 +23,14 @@
   right: 0;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.7);
-  min-height: 108vh;
+  min-height: 116vh;
 }
 
 .modalContainer > h1 {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
+  color: #fff;
 }
 .modalForm {
   display: flex;
@@ -38,7 +40,20 @@
 }
 
 .modalForm input {
-  height: 2rem;
+  padding: 0.5rem 0.2rem;
+  background-color: inherit;
+  border: 1px solid var(--clr-grey-4);
+  border-radius: 2%;
+  color: #fff;
+}
+.modalForm input:focus {
+  outline: none;
+}
+
+.modalForm input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .modalBtnContainer {

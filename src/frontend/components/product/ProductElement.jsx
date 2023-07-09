@@ -78,7 +78,7 @@ export default function ProductElement() {
     <div className={styles.productDetailPage}>
       <div className={styles.productElement}>
         <div className={styles.productImg}>
-          <img src={images} alt="product-image" />
+          <img src={images} alt={title} />
         </div>
         <div className={styles.prodctDetails}>
           <div className={styles.productHeading}>
@@ -93,15 +93,20 @@ export default function ProductElement() {
           <hr />
           <div className={styles.productDescription}>
             <div className={styles.productDescription_row}>
-              <p>Category:</p> <p>{categoryName}</p>
+              <p>Category:</p>{" "}
+              <p className={styles.poductValue}>{categoryName}</p>
             </div>
             <div className={styles.productDescription_row}>
               <p>Stock:</p>
-              <p>{inStock ? "Availaible" : "Not Availaible"}</p>
+              <p className={styles.poductValue}>
+                {inStock ? "Availaible" : "Not Availaible"}
+              </p>
             </div>
             <div className={styles.productDescription_row}>
               <p>Fast Delivery:</p>
-              <p>{fastDelivery ? "Yes" : "No"}</p>
+              <p className={styles.poductValue}>
+                {fastDelivery ? "Yes" : "No"}
+              </p>
             </div>
           </div>
 
