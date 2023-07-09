@@ -24,12 +24,12 @@ a {
 }
 
 .featureCard {
-  height: 10rem;
-  width: 10rem;
+  min-height: 10rem;
+  min-width: 10rem;
   border-radius: var(--radius);
   border: 1px solid var(--clr-grey-4);
-  font-size: 1.25rem;
-  transition: 0.3s ease-in-out all;
+  font-size: 1.1rem;
+  transition: scale 0.3s ease-in-out;
   box-shadow: var(--light-shadow);
   font-weight: bold;
   cursor: pointer;
@@ -43,7 +43,6 @@ a {
 
 .featureCardTitle {
   margin: 3rem auto;
-  /* color: var(--primary-color); */
   color: #fff;
   text-align: center;
 }
