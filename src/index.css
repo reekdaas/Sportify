@@ -51,8 +51,6 @@
 body {
   background-color: var(--clr-grey-8);
   width: 100vw;
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color);
 }
 
 .btn {
@@ -96,4 +94,21 @@ a {
 
 .inCartBtn {
   background-color: var(--clr-green-dark);
+}
+
+::-webkit-scrollbar {
+  width: 0.5vh;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--clr-grey-5);
+}
+
+::-webkit-scrollbar-thumb {
+  height: 5vh;
+  background-color: var(--primary-color);
+}
+
+body {
+  overflow-x: hidden;
 }

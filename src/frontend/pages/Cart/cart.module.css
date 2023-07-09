@@ -1,7 +1,7 @@
 .cartPage {
   display: flex;
   /* margin: 1rem; */
-  min-height: 100vh;
+  min-height: 67vh;
   gap: 1rem;
   align-items: center;
   flex-direction: column;
