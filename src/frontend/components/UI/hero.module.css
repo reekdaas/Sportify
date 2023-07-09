@@ -1,4 +1,5 @@
 .mainImg {
+  overflow-x: hidden;
   width: 100vw;
   height: 550px;
   position: relative;
