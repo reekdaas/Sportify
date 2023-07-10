@@ -18,7 +18,7 @@ export default function CartCard({ product }) {
   const [btnDisable, setBtnDisable] = useState(false);
   const { token } = useAuthContext();
   const { cartDispatch } = useCartContext();
-  const { _id, id, images, title, price } = product;
+  const { _id, images, title, price, qty } = product;
   const { wishlistState, wishlistDispatch } = useWishListContext();
 
   const cartQuantityHandler = (type) => {
@@ -62,7 +62,7 @@ export default function CartCard({ product }) {
           >
             -
           </button>
-          <span className={styles.cartItemQuantityValue}>1</span>
+          <span className={styles.cartItemQuantityValue}>{qty}</span>
           <button
             className={styles.cartItemQuantityBtn}
             onClick={() => {
