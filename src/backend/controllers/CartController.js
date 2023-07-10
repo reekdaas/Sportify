@@ -106,6 +106,7 @@ export const removeItemFromCartHandler = function (schema, request) {
 
 export const updateCartItemHandler = function (schema, request) {
   const productId = request.params.productId;
+
   const userId = requiresAuth.call(this, request);
   try {
     if (!userId) {
@@ -119,6 +120,7 @@ export const updateCartItemHandler = function (schema, request) {
     }
     const userCart = schema.users.findBy({ _id: userId }).cart;
     const { action } = JSON.parse(request.requestBody);
+
     if (action.type === "increment") {
       userCart.forEach((product) => {
         if (product._id === productId) {
