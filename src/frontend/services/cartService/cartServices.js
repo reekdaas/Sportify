@@ -82,19 +82,19 @@ export const updateCartQuantityServices = async (
     console.log(productId);
     const response = await axios.post(
       `/api/user/cart/${productId}`,
-      { action: type },
+      { action: { type: type } },
       { headers: { authorization: encodedToken } }
     );
-
+    console.log(response);
     const {
       status,
       data: { cart },
     } = response;
-    console.log(response);
+    // console.log(response);
     if (status === 200) {
       cartDispatch({ type: "UPDATE_QUANTITY_IN_CART", payload: cart });
     }
-    console.log(cart);
+    // console.log(cart);
   } catch (err) {
     console.error(err);
   }

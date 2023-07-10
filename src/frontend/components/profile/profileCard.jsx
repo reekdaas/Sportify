@@ -12,11 +12,7 @@ export default function ProfileCard() {
   const { wishlistDispatch } = useWishListContext();
   const { filterProductDispatch } = useFilterContext();
 
-  const {
-    userData: { name, email },
-    setToken,
-    setUserData,
-  } = useAuthContext();
+  const { userData, setToken, setUserData } = useAuthContext();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -33,10 +29,11 @@ export default function ProfileCard() {
   return (
     <div className={styles.profileCard}>
       <h2>
-        Name: <span className={styles.profileCardvalue}>{name}</span>{" "}
+        Name: <span className={styles.profileCardvalue}>{userData?.name}</span>{" "}
       </h2>
       <h3>
-        Email: <span className={styles.profileCardvalue}> {email}</span>{" "}
+        Email:{" "}
+        <span className={styles.profileCardvalue}> {userData?.email}</span>{" "}
       </h3>
       <button onClick={handleLogout} className={styles.logoutbtn}>
         LogOut
