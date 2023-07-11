@@ -15,6 +15,7 @@ import {
   useAddressContext,
   AddressContextProvider,
 } from "./address/addressContext";
+import ToastWrapper from "../components/toast/toastWrapper";
 
 export {
   ProductsContextProvider,
@@ -30,4 +31,5 @@ export {
   useWishListContext,
   useAddressContext,
   AddressContextProvider,
+  ToastWrapper,
 };
