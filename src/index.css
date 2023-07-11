@@ -32,6 +32,11 @@
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
+  --clr-black-1: #36454f;
+  --clr-black-2: #1a2421;
+
+  --clr-gray-1: #b7bcbc;
+
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
