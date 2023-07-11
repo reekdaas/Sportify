@@ -14,10 +14,13 @@ import ProfilePage from "./frontend/pages/profile/profilePage";
 import ProfileCard from "./frontend/components/profile/profileCard";
 import UserAddress from "./frontend/components/profile/addresses";
 import OrderSucess from "./frontend/pages/checkOut/orderSucess";
+import { ToastWrapper } from "./frontend/context";
+import Signin from "./frontend/pages/signin/signIn";
 
 function App() {
   return (
     <>
+      <ToastWrapper />
       <Navbar />
       <Routes>
         <Route path="*" element={<ErrorPage />} />
@@ -26,6 +29,7 @@ function App() {
         <Route path="/product/:productId" element={<ProductElement />} />
         <Route path="/mockman" element={<MockAPI />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signin" element={<Signin />} />
         <Route
           path="/cart"
           element={
