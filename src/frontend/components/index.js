@@ -9,6 +9,7 @@ import Loading from "./loading/loading";
 import Filter from "./filters/Filter";
 import CartCard from "./Cart/cartCard";
 import { OrderDetails } from "./Order/orderDetails";
+import ToastWrapper from "./toast/toastWrapper";
 export {
   Navbar,
   Footer,
@@ -20,4 +21,5 @@ export {
   Filter,
   CartCard,
   OrderDetails,
+  ToastWrapper,
 };
