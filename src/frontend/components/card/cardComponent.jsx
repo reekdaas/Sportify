@@ -5,24 +5,20 @@ import {
   useCartContext,
   useWishListContext,
 } from "../../context";
-import { addToCartService } from "../../services/cartService/cartServices";
-import {
-  addToWishlistService,
-  removeFromWishlistService,
-} from "../../services/wishlistService/wishListService";
+
 import {
   isProductAlreadyInCart,
   isProductAlreadyInWishList,
 } from "../../utils/getProductUtils";
-import { useState } from "react";
 
 export default function CardComponent({ product }) {
   // console.log(product);
-  const [btnDisable, setBtnDisable] = useState(false);
+
   const navigate = useNavigate();
   const { token } = useAuthContext();
-  const { cartState, cartDispatch } = useCartContext();
-  const { wishlistState, wishlistDispatch } = useWishListContext();
+  const { cartState, addToCart } = useCartContext();
+  const { wishlistState, addToWishlist, removeFromWishlist } =
+    useWishListContext();
 
   const { _id: productId, inStock } = product;
   const alreadyInWishList = isProductAlreadyInWishList(
@@ -31,14 +27,12 @@ export default function CardComponent({ product }) {
   );
   const alreadyInCart = isProductAlreadyInCart(productId, cartState?.cart);
 
-  // console.log(alreadyInWishList);
-
   const handleCart = () => {
     if (token) {
       if (alreadyInCart) {
         navigate("/cart");
       } else {
-        addToCartService(product, token, cartDispatch, setBtnDisable);
+        addToCart(product, token);
       }
     } else {
       navigate("/login");
@@ -48,9 +42,9 @@ export default function CardComponent({ product }) {
   const handleWishlist = () => {
     if (token) {
       if (alreadyInWishList) {
-        removeFromWishlistService(token, productId, wishlistDispatch);
+        removeFromWishlist(token, productId);
       } else {
-        addToWishlistService(token, product, wishlistDispatch);
+        addToWishlist(token, product);
       }
     } else {
       navigate("/login");
@@ -75,17 +69,19 @@ export default function CardComponent({ product }) {
           />
         </Link>
 
-        <h1 className={styles.cardTitle}>{product?.title}</h1>
-        <div className={styles.cardBody}>
-          <p className={styles.cardPrice}>{"₹" + product?.price}</p>
-        </div>
+        <h3 className={styles.cardTitle}>{product?.title}</h3>
+        <p className={styles.cardPrice}>{"₹" + product?.price}</p>
+
         <div className={styles.cardFooter}>
           <button
             disabled={!inStock}
-            className={` ${styles.btnCard} ${
-              btnDisable || !inStock ? "disabled-btn" : ""
-            } 
-             ${alreadyInCart && "inCartBtn"} `}
+            className={
+              !inStock
+                ? `${styles.disabledBtn} ${styles.btnCard}`
+                : alreadyInCart
+                ? `${styles.btnCard}  ${styles.inCartBtn}`
+                : `${styles.btnCard}`
+            }
             onClick={handleCart}
           >
             {!inStock
@@ -98,7 +94,7 @@ export default function CardComponent({ product }) {
             disabled={!inStock}
             className={
               !inStock
-                ? `disabled-btn ${styles.btnCard}`
+                ? `${styles.disabledBtn} ${styles.btnCard}`
                 : alreadyInWishList
                 ? `${styles.btnCard} ${styles.inWishlistBtn}`
                 : `${styles.btnCard}`
