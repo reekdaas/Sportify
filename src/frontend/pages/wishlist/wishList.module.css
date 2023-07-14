@@ -1,5 +1,5 @@
 .wishlistContainer {
-  background-color: var(--clr-grey-3);
+  background-color: var(--clr-black-2);
   margin: 0 auto;
   max-width: 120rem;
   text-align: center;
@@ -11,7 +11,7 @@
 }
 
 .emptyWishlist {
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 .wishlistCardsContainer {
@@ -27,4 +27,11 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
 }
