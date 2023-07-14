@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./orderdetails.module.css";
 import { useCartContext } from "../../context";
 import { getTotalCartAmount } from "../../utils/getProductUtils";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function OrderDetails() {
   const { cartState } = useCartContext();
@@ -38,16 +38,15 @@ export function OrderDetails() {
           <p>{priceAfterDiscount}</p>
         </div>
       </div>
-      <Link to="/checkout">
-        <button
-          className={styles.orderBtn}
-          // onClick={() => {
-          //   navigate("/checkout");
-          // }}
-        >
-          Procced To Buy
-        </button>
-      </Link>
+
+      <button
+        className={styles.orderBtn}
+        onClick={() => {
+          navigate("/checkout");
+        }}
+      >
+        Procced To Buy
+      </button>
     </div>
   );
 }
