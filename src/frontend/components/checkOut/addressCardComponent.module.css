@@ -6,6 +6,7 @@
   cursor: pointer;
   margin: 0.5rem;
   box-shadow: var(--light-shadow);
+  color: var(--clr-gray-1);
 }
 
 .addressCardInfo {
@@ -19,4 +20,5 @@
 
 .addressCard > input {
   cursor: pointer;
+  margin-right: 0.5rem;
 }
