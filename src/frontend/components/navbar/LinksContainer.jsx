@@ -21,9 +21,7 @@ export default function LinksContainer() {
     wishlistState: { wishlist },
   } = useWishListContext();
 
-  // const {} = useWishListContext();
   const navigate = useNavigate();
-  // console.log(cart.length);
 
   return (
     <div className={styles.linkContainer}>
