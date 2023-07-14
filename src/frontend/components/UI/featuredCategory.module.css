@@ -1,7 +1,7 @@
 .featuredSection {
   height: 25rem;
   width: 100vw;
-  background-color: var(--clr-grey-4);
+  background-color: var(--clr-black-1);
 }
 
 a {
@@ -45,4 +45,11 @@ a {
   margin: 3rem auto;
   color: #fff;
   text-align: center;
+}
+
+.spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
