@@ -1,0 +1,27 @@
+.paginationBtnContainer {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* position: sticky; */
+}
+.btn {
+  padding: 0.5rem 0.75rem;
+  background-color: #3f08b5;
+  color: #ffff;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  border: 1px solid #fff;
+  border-radius: 2%;
+  transition: all 200ms 100ms;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.activeBtn {
+  background-color: #ffff;
+  color: #3f08b5;
+  border: 1px solid #3f08b5;
+}
