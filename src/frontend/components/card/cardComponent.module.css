@@ -1,28 +1,18 @@
 .card {
-  position: relative;
   width: 16rem;
   height: 20rem;
-  background: #7474bf;
-  background: -webkit-linear-gradient(to right, #348ac7, #7474bf);
-  background: linear-gradient(to right, #348ac7, #7474bf);
+  background: #aaaaf4;
+  background: -webkit-linear-gradient(to right, #348ac7, #9797ea);
+  background: linear-gradient(to right, #348ac7, #aeaef4);
 
   color: #010101;
   border-radius: 1rem;
-  border: 0.1rem solid transparent;
+  border: 0.1rem solid var(--primary-color);
   overflow: hidden;
   box-shadow: 0 0.2rem 0.6rem #0003;
-  transition: 0.5s ease-in-out;
-}
-
-.card:hover {
-  border: 0.1rem solid var(--primary-color);
-  transform: scale(1.05);
 }
 
 .cardContent {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   padding: 0.5rem 1rem;
@@ -31,75 +21,49 @@
   justify-content: space-around;
   align-items: center;
   z-index: 50;
+  font-weight: 800;
 }
-
-.cardImage,
 .cardTitle {
-  transform: translateY(4rem);
-  transition: 0.5s ease-in-out;
+  text-align: center;
+}
+.cardPrice {
+  font-size: 1.2rem;
 }
 
 .cardImage {
-  width: auto;
+  padding: 0.5rem 0;
+  object-fit: cover;
+  width: 10rem;
   height: 10rem;
+  transition: all 0.3s ease-in-out 0.2s;
 }
 
-.cardTitle {
-  text-align: center;
-  font-size: 1.15rem;
-  font-weight: 700;
-  transition-delay: 0.1s;
+.cardImage:hover {
+  transform: scale(1.1);
 }
-
-.cardBody,
 .cardFooter {
-  transform: translateY(8rem);
-  transition: 0.5s ease-in-out;
-}
-
-.cardBody {
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  transition-delay: 0.2s;
-}
-
-.card:hover .cardImage,
-.card:hover .cardTitle,
-.card:hover .cardBody,
-.card:hover .cardFooter {
-  transform: translateY(0);
-}
-
-.cardFooter {
-  width: 100%;
-  text-align: center;
-  padding: 0.25rem 0.5rem;
-  transition-delay: 0.3s;
-}
-
-.cardPrice {
-  font: bolder 1.5rem sans-serif;
 }
 
 .btnCard {
   padding: 0.5rem 1rem;
   margin: 0.25rem 0.5rem;
-  background-color: #455eb5;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  background-color: #3f08b5;
   border-style: none;
   color: #ffffff;
   border-radius: 0.5rem;
-  /* cursor: pointer; */
+  cursor: pointer;
   text-align: center;
   font-weight: bold;
-  transition: all 0.1s linear;
+  transition: all 0.3s linear 0.2s;
+  font-size: 0.7rem;
+  font-weight: 800;
 }
 
 .btnCard:hover {
   cursor: pointer;
+  opacity: 0.8;
+  background-color: var(--clr-primary-1);
 }
 
 /* .disabledBtn {
@@ -138,4 +102,12 @@
 
 .inWishlistBtn {
   background-color: var(--clr-red-light);
+}
+
+.disabledBtn {
+  cursor: not-allowed;
+}
+
+.inCartBtn {
+  background-color: var(--clr-green-dark);
 }
