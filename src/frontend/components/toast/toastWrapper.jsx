@@ -13,7 +13,7 @@ export default function ToastWrapper() {
         toastOptions={{
           duration: 2000,
           style: {
-            backgroundColor: "#455eb5",
+            backgroundColor: "#36454f",
             color: "#fff",
             fontWeight: "800",
           },
