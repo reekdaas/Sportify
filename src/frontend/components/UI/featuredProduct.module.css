@@ -1,7 +1,7 @@
 .featuredContainer {
   /* height: 30rem; */
   width: 100vw;
-  background-color: var(--clr-grey-4);
+  background-color: var(--clr-black-1);
   box-shadow: var(--dark-shadow);
 }
 
@@ -18,4 +18,11 @@
   justify-content: space-around;
   align-items: center;
   padding: 1rem 0.5rem;
+}
+
+.spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
