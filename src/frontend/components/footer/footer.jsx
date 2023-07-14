@@ -14,8 +14,8 @@ export default function Footer() {
         SporTiFy
       </h3>
       <h2 className={styles.footerHeading}>
-        &copy; {new Date().getFullYear()}
-        <span>SportiFy</span> @No Copyright
+        &copy;{new Date().getFullYear()}
+        <span>SporTiFy</span> @No Copyright
       </h2>
 
       <ul className={styles.footerSocials}>
