@@ -8,24 +8,19 @@ import {
 import Loading from "../loading/loading";
 import styles from "./productElement.module.css";
 import Stars from "./Stars/Stars";
-import { addToCartService } from "../../services/cartService/cartServices";
 import {
   isProductAlreadyInCart,
   isProductAlreadyInWishList,
 } from "../../utils/getProductUtils";
-import {
-  addToWishlistService,
-  removeFromWishlistService,
-} from "../../services/wishlistService/wishListService";
-import { useState } from "react";
 
 export default function ProductElement() {
-  const { productState, productDispatch } = useProductContext();
-  const [btnDisabled, setBtnDisabled] = useState(false);
+  const { productState } = useProductContext();
+
   const navigate = useNavigate();
   const { token } = useAuthContext();
-  const { cartState, cartDispatch } = useCartContext();
-  const { wishlistState, wishlistDispatch } = useWishListContext();
+  const { cartState, addToCart } = useCartContext();
+  const { wishlistState, removeFromWishlist, addToWishlist } =
+    useWishListContext();
   const { productId } = useParams();
   const searchedProduct = productState?.productList?.find(
     ({ _id }) => _id === productId
@@ -54,7 +49,7 @@ export default function ProductElement() {
       if (alreadyInCart) {
         navigate("/cart");
       } else {
-        addToCartService(searchedProduct, token, cartDispatch, setBtnDisabled);
+        addToCart(searchedProduct, token);
       }
     } else {
       navigate("/login");
@@ -64,16 +59,16 @@ export default function ProductElement() {
   const handleWishlist = () => {
     if (token) {
       if (alreadyInWishList) {
-        removeFromWishlistService(token, productId, wishlistDispatch);
+        removeFromWishlist(token, idOfProduct);
       } else {
-        addToWishlistService(token, searchedProduct, wishlistDispatch);
+        addToWishlist(token, searchedProduct);
       }
     } else {
       navigate("/login");
     }
   };
 
-  console.log(inStock);
+  // console.log(inStock);
   return (
     <div className={styles.productDetailPage}>
       <div className={styles.productElement}>
@@ -112,17 +107,23 @@ export default function ProductElement() {
 
           <div className={styles.productElementBtns}>
             <button
-              className={alreadyInCart ? `inCartBtn` : `${styles.productBtn}`}
+              className={
+                alreadyInCart
+                  ? `${styles.productBtn} ${styles.inCartBtn} `
+                  : `${styles.productBtn}`
+              }
               onClick={handleCart}
-              disabled={!inStock || btnDisabled}
+              disabled={!inStock}
             >
               {alreadyInCart ? "Go To Cart" : "Add To Cart"}
             </button>
             <button
               className={
-                inStock ? `${styles.wishListBtn}` : `${styles.disabledBtn}`
+                alreadyInWishList
+                  ? `${styles.inWishListBtn} ${styles.productBtn} `
+                  : `${styles.productBtn}`
               }
-              disabled={!inStock || btnDisabled}
+              disabled={!inStock}
               onClick={handleWishlist}
             >
               {alreadyInWishList ? "Remove From WishList" : "Add To WishList"}
