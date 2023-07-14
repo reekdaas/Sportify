@@ -2,7 +2,12 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import MockAPI from "./backend/Mockman";
 import { HomePage } from "./frontend/pages";
-import { Footer, Navbar, ProductElement } from "./frontend/components";
+import {
+  Footer,
+  Navbar,
+  ProductElement,
+  ToastWrapper,
+} from "./frontend/components";
 import ErrorPage from "./frontend/pages/error/errorPage";
 import ProductListing from "./frontend/pages/products/productListing";
 import Cart from "./frontend/pages/Cart/cart";
@@ -14,7 +19,7 @@ import ProfilePage from "./frontend/pages/profile/profilePage";
 import ProfileCard from "./frontend/components/profile/profileCard";
 import UserAddress from "./frontend/components/profile/addresses";
 import OrderSucess from "./frontend/pages/checkOut/orderSucess";
-import { ToastWrapper } from "./frontend/context";
+
 import Signin from "./frontend/pages/signin/signIn";
 
 function App() {
