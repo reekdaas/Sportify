@@ -3,21 +3,6 @@
  * You can add products of your wish with different attributes
  * */
 
-/* 
-
-   _id: uuid(),
-    title: "Dot Punk",
-    artist: "Peter Notrott",
-    desc: "Oil on canvas| Dimensions: 60x60cm",
-    img: "https://cdn.singulart.com/artworks/v2/cropped/6305/main/fhd/1053013_b1fc42ad416a6c5eaeea01a726e0d41b.jpeg",
-    price: 888,
-    original_price: 1000,
-    rating: 3,
-    rated_by: 10,
-    categoryName: "Digital Art",
-    inStock: true,
-    fastDelivery: true,*/
-
 export const products = [
   {
     _id: "ROGUNHRYMMD3M2A",
