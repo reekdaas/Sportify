@@ -10,7 +10,7 @@ export function AddressContextProvider({ children }) {
     addressReducer,
     initialAddressState
   );
-  console.log(addressState);
+  // console.log(addressState);
   const value = { addressState, addressDispatch };
   return (
     <AddressContext.Provider value={value}>{children}</AddressContext.Provider>
