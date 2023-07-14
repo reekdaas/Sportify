@@ -13,16 +13,17 @@
 
 .profileCardvalue {
   font-weight: 800;
-  color: #010;
+  color: var(--clr-gray-1);
 }
 
 .logoutbtn {
+  margin-top: 0.75rem;
   text-transform: uppercase;
   letter-spacing: var(--spacing);
   padding: 1rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
-  background-color: var(--clr-grey-2);
+  background-color: var(--clr-btn);
   border: none;
   font-size: 1rem;
   font-weight: bold;
