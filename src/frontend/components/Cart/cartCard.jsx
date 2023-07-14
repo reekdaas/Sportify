@@ -1,49 +1,33 @@
-import React, { useEffect, useState } from "react";
 import styles from "./cartCard.module.css";
-
 import {
   useAuthContext,
   useCartContext,
   useWishListContext,
 } from "../../context";
-import {
-  getCartServices,
-  removeItemFromCartServices,
-  updateCartQuantityServices,
-} from "../../services/cartService/cartServices";
 import { isProductAlreadyInWishList } from "../../utils/getProductUtils";
-import { addToWishlistService } from "../../services/wishlistService/wishListService";
+
+import { toast } from "react-hot-toast";
 
 export default function CartCard({ product }) {
-  const [btnDisable, setBtnDisable] = useState(false);
+  const { disabledBtn } = useCartContext();
   const { token } = useAuthContext();
-  const { cartDispatch } = useCartContext();
+  const { updateQuantityInCart, removeFromCart } = useCartContext();
   const { _id, images, title, price, qty } = product;
-  const { wishlistState, wishlistDispatch } = useWishListContext();
+  const { wishlistState, addToWishlist } = useWishListContext();
 
   const cartQuantityHandler = (type) => {
-    console.log(type);
-    updateCartQuantityServices(_id, token, type, cartDispatch);
+    updateQuantityInCart(_id, token, type);
   };
   const handleRemoveFromCart = () => {
-    removeItemFromCartServices(_id, token, cartDispatch);
+    removeFromCart(_id, token);
+    toast.success("Removed from cart");
   };
 
   const isInWishList = isProductAlreadyInWishList(_id, wishlistState?.wishlist);
 
   const handleMovetoWishlis = () => {
-    if (isInWishList) {
-      setBtnDisable(true);
-    } else {
-      addToWishlistService(token, product, wishlistDispatch);
-    }
+    addToWishlist(token, product);
   };
-
-  useEffect(() => {
-    if (token) {
-      getCartServices(token, cartDispatch);
-    }
-  }, [token]);
 
   return (
     <div className={styles.ItemCard}>
@@ -55,16 +39,27 @@ export default function CartCard({ product }) {
         <h3>Price: ₹{price}</h3>
         <div className={styles.cartItemQuantity}>
           <button
-            className={styles.cartItemQuantityBtn}
+            disabled={disabledBtn || qty === 1}
+            className={
+              disabledBtn || qty === 1
+                ? `${styles.cartItemQuantityBtn} ${styles.disabledBtn} `
+                : `${styles.cartItemQuantityBtn}`
+            }
             onClick={() => {
-              cartQuantityHandler("increment");
+              if (qty === 1) removeFromCart(_id, token);
+              else cartQuantityHandler("decrement");
             }}
           >
             -
           </button>
           <span className={styles.cartItemQuantityValue}>{qty}</span>
           <button
-            className={styles.cartItemQuantityBtn}
+            disabled={disabledBtn}
+            className={
+              disabledBtn
+                ? `${styles.cartItemQuantityBtn} ${styles.disabledBtn} `
+                : `${styles.cartItemQuantityBtn}`
+            }
             onClick={() => {
               cartQuantityHandler("increment");
             }}
@@ -79,9 +74,10 @@ export default function CartCard({ product }) {
           <button
             className={
               isInWishList
-                ? ` ${styles.disabledBtn} ${styles.cartBtn} `
+                ? ` ${styles.disabledBtn} ${styles.cartBtn} ${styles.isInWishList} `
                 : styles.cartBtn
             }
+            disabled={isInWishList}
             onClick={handleMovetoWishlis}
           >
             {isInWishList ? "Already In Wishlist" : "Move To Wishlist"}
