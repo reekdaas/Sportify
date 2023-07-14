@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: #fff;
+  background-color: var(--clr-grey-2);
   border-radius: 0.25rem;
   box-shadow: var(--dark-shadow);
   height: fit-content;
@@ -12,10 +12,11 @@
   position: -webkit-sticky;
   position: sticky;
   top: 6rem;
+  color: #fff;
 }
 
 .orderContainer > h2 {
-  background-color: var(--clr-grey-7);
+  background-color: var(--clr-black-2);
   font-size: 1.5rem;
   padding: 1rem 1.5rem;
   font-weight: 600;
@@ -38,7 +39,7 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  background-color: var(--clr-grey-4);
+  background-color: var(--clr-btn);
   border: none;
   font-size: 1rem;
   font-weight: bold;
