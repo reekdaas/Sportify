@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-color: var(--clr-grey-4);
+  background-color: var(--clr-black-2);
 }
 
 .productElement {
@@ -12,8 +12,13 @@
   gap: 2rem;
   padding: 1rem;
   height: 30rem;
-  box-shadow: var(--dark-shadow);
-  background-color: var(--clr-grey-5);
+  background: rgba(72, 5, 215, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  color: #fff;
+  border-radius: 2%;
 }
 .productImg {
   width: 20rem;
@@ -66,7 +71,7 @@
   margin-top: 1.25rem;
 }
 
-.productElementBtns > button {
+.productBtn {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-transform: uppercase;
@@ -79,18 +84,22 @@
   cursor: pointer;
 }
 
-.productElementBtns > button:hover {
+.productBtn:hover {
   background-color: var(--clr-primary-1);
 }
 
-.cartbtn,
-.wishlistbtn {
-  cursor: pointer;
-}
 .disabledBtn {
   cursor: not-allowed;
 }
 
 .poductValue {
   margin-left: auto;
+}
+
+.inCartBtn {
+  background-color: var(--clr-green-dark);
+}
+
+.inWishListBtn {
+  background-color: var(--clr-red-light);
 }
