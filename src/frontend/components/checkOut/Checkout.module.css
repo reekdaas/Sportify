@@ -1,57 +1,53 @@
 .checkOutCardContainer {
   display: flex;
   flex-direction: column;
-  height: 28rem;
-  width: 20rem;
+  max-height: 28rem;
+  max-width: 20rem;
   justify-content: space-around;
-  background-color: #fff;
+  background-color: var(--clr-grey-2);
   box-shadow: var(--dark-shadow);
+  color: var(--clr-gray-1);
+  padding: 1rem 2rem;
 }
 
 .orderListHeading,
 .priceDetailsHeading {
-  font-size: 1rem;
-  color: var(--clr-primary-1);
-  background-color: #ddd;
-  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  color: #fff;
+  background-color: var(--clr-black-2);
+  padding: 0.5rem;
+  border: none;
 }
 
 .orderListDetails,
 .priceDetailsContainer {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .containerRow {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
 }
 
 .containerRow > p {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 800;
 }
 
 .checkOutBtn {
-  padding: 1.1rem 1rem;
-  /* margin: 0.5rem 0 0; */
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-
+  padding: 1rem;
+  border-radius: 0.25rem;
   cursor: pointer;
-  background-color: var(--clr-grey-4);
+  background-color: var(--clr-btn);
   border: none;
   font-size: 1rem;
   font-weight: bold;
   color: white;
   transition: all 0.1s linear;
+  font-weight: 800;
 }
 .checkOutBtn:hover {
   background-color: var(--clr-primary-1);
-}
-
-.warningText {
-  color: var(--clr-red-dark);
 }
