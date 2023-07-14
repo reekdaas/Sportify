@@ -51,7 +51,7 @@ export default function Filter() {
       <div className={styles.filterCategory}>
         <h4>Category</h4>
         <ul>
-          {[, ...categoriesList, { id: 3, categoryName: "all" }]?.map(
+          {[...categoriesList, { id: 3, categoryName: "all" }]?.map(
             ({ _id, categoryName }) => {
               return (
                 <li key={_id} className={styles.categoryListItem}>
