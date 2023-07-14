@@ -5,17 +5,16 @@ import {
   useAddressContext,
   useAuthContext,
   useCartContext,
-  useWishListContext,
 } from "../../context";
-import { removeItemFromCartServices } from "../../services/cartService/cartServices";
+
 import { getTotalCartAmount } from "../../utils/getProductUtils";
+import { toast } from "react-hot-toast";
 
 export default function CheckOutCard() {
-  let showWarning;
-  const { token } = useAuthContext();
+  const { token, userData } = useAuthContext();
   const {
     cartState: { cart },
-    cartDispatch,
+    removeFromCart,
   } = useCartContext();
 
   const {
@@ -24,24 +23,51 @@ export default function CheckOutCard() {
 
   const navigate = useNavigate();
 
-  // console.log(cart);
   const cleanCart = () => {
     cart.forEach(({ _id }) => {
-      removeItemFromCartServices(_id, token, cartDispatch);
+      removeFromCart(_id, token);
     });
   };
 
   const handlePlaceOrder = () => {
-    if (selectedAddressId) {
-      cleanCart();
-      navigate("/ordersucess");
-      popper();
+    cleanCart();
+    navigate("/ordersucess");
+    popper();
 
-      setTimeout(() => {
-        navigate("/");
-      }, 5000);
+    setTimeout(() => {
+      navigate("/");
+    }, 5000);
+    toast.success("Order placed successfully");
+  };
+
+  const payment = () => {
+    if (selectedAddressId) {
+      const options = {
+        key: "rzp_test_pW9wk40Jwa0h4z",
+        key_secret: "EVgzy8WyBn3calx77DFJcGuQ",
+        amount: Number(totalAmount) * 100,
+        currency: "INR",
+        name: "SporTiFy",
+        description: "Checkout for Merch",
+        handler: function (response) {
+          handlePlaceOrder();
+        },
+        prefill: {
+          name: userData?.name,
+          email: userData?.email || "xyz@gmail.com",
+          contact: "1234567890",
+        },
+        notes: {
+          address: "SporTiFy Office",
+        },
+        theme: {
+          color: "#455eb5",
+        },
+      };
+      const pay = new window.Razorpay(options);
+      pay.open();
     } else {
-      showWarning = "PLEASE SELECT AN ADDRESS TO PROCEED FURTHER";
+      toast.error("Select an address to proceed further");
     }
   };
 
@@ -71,8 +97,6 @@ export default function CheckOutCard() {
       <div className={styles.orderListHeading}>
         <h1>Order List:</h1>
       </div>
-      <hr />
-
       <div className={styles.orderListDetails}>
         <div className={styles.containerRow}>
           <p>Item List:</p>
@@ -105,15 +129,10 @@ export default function CheckOutCard() {
             <p>Total Amount:</p>
             <p>{totalAmount}</p>
           </div>
-          {showWarning && (
-            <div className={styles.containerRow}>
-              <p className={styles.warningText}>{showWarning}</p>
-            </div>
-          )}
         </div>
       </div>
 
-      <button className={styles.checkOutBtn} onClick={handlePlaceOrder}>
+      <button className={styles.checkOutBtn} onClick={payment}>
         PLACE ORDER
       </button>
     </div>
