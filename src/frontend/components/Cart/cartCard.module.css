@@ -1,23 +1,28 @@
 .ItemCard {
   background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  background: rgba(72, 5, 215, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   margin: 1rem auto;
   max-width: 30rem;
   padding: 1rem 2rem;
+  color: #fff;
+  align-items: center;
 }
 
 .cardImage {
-  display: flex;
-  height: 15rem;
+  max-width: 12rem;
+  align-self: center;
 }
 
 .cardImage > img {
-  height: 100%;
+  height: 80%;
   object-fit: contain;
-  width: 100%;
+  width: 80%;
 }
 
 .cardDetails {
@@ -40,7 +45,7 @@
   justify-content: center;
   padding: 2px 0;
   width: 4rem;
-  color: #010;
+  color: #fff;
 }
 .cartItemQuantityBtn {
   border: 1px solid #888;
@@ -50,37 +55,51 @@
   font-weight: 700;
   height: 2rem;
   padding: 0.2rem 0.5rem rem;
-
   width: 2rem;
 }
 
 .cartButtons {
   display: flex;
+  justify-content: center;
   gap: 0.5rem;
   margin: 0.5rem 0 0;
 }
 
 .cartBtn {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
   cursor: pointer;
-  background-color: var(--clr-grey-4);
+  background-color: #455eb5;
   border: none;
   font-size: 1rem;
   font-weight: bold;
-  color: white;
-  transition: all 0.1s linear;
+  color: #fff;
+  transition-property: all;
+  transition-duration: 400ms;
+  transition-delay: 200ms;
+  font-size: 0.75rem;
+  width: 100%;
 }
 
 .cartBtn:hover {
   background-color: var(--clr-primary-1);
+  opacity: 0.8;
 }
 
 .disabledBtn {
   cursor: not-allowed;
 }
 
-.cardDetails > h2,
-h3 {
+.cardDetails > h3 {
   margin: 0 0 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.isInWishList {
+  background-color: var(--clr-red-light);
+}
+
+.disabledBtn {
+  cursor: not-allowed;
 }
