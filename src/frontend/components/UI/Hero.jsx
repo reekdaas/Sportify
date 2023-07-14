@@ -21,7 +21,6 @@ export default function Hero() {
           >
             shop now
           </button>
-          =
         </div>
       </article>
     </div>
