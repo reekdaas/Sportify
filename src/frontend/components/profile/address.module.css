@@ -10,11 +10,12 @@
 .addressCard {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin: 0.5rem 0.25rem;
   width: 100%;
-  border: 2px solid var(--clr-grey-2);
+  border: 2px solid var(--clr-black-2);
   font-size: 1rem;
+  border-radius: 0.25rem;
 }
 
 .addressCard > h3 {
@@ -47,14 +48,17 @@
   padding: 1rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
-  background-color: var(--clr-grey-2);
+  background-color: var(--clr-btn);
   border: none;
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  transition: all 0.1s linear;
+  transition-property: all;
+  transition-delay: 200ms;
+  transition-duration: 400ms;
 }
 
 .addAddressBtn:hover {
   background-color: var(--clr-primary-1);
+  opacity: 0.8;
 }
