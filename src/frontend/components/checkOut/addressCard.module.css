@@ -1,14 +1,16 @@
 .addressCardContainer {
-  width: 40rem;
-  height: 30rem;
-  background-color: #fff;
+  max-width: 30rem;
+  min-height: 15rem;
+  background-color: var(--clr-grey-2);
   box-shadow: var(--dark-shadow);
+  color: #fff;
+  padding: 1rem 2rem;
 }
 
 .addressCardHeader {
   font-size: 1rem;
-  color: var(--clr-primary-1);
-  background-color: #ddd;
+  color: #fff;
+  background-color: var(--clr-black-2);
   padding: 0.75rem 0.5rem;
 }
 
@@ -17,14 +19,17 @@
   margin: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  background-color: var(--clr-grey-4);
+  background-color: var(--clr-btn);
   border: none;
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  transition: all 0.1s linear;
+  transition-property: all;
+  transition-delay: 200ms;
+  transition-duration: 400ms;
 }
 
 .addressCardBtn:hover {
   background-color: var(--clr-primary-1);
+  opacity: 0.8;
 }
