@@ -1,6 +1,6 @@
 # SporTiFy
 
-[SporTiFy]() An Ecommerce website for sporting merchandise.
+[SporTiFy](https://sportify-onlysports.netlify.app/) An Ecommerce website for sporting merchandise.
 
 ## Features
 
