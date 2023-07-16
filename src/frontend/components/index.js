@@ -1,6 +1,6 @@
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/footer";
-
+import NavbarLinks from "./navbar/LinksContainer";
 import Hero from "./UI/Hero";
 import FeaturedCategory from "./UI/FeaturedCategory";
 import FeaturedProducts from "./UI/FeaturedProducts";
@@ -22,4 +22,5 @@ export {
   CartCard,
   OrderDetails,
   ToastWrapper,
+  NavbarLinks,
 };
