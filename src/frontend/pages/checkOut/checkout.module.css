@@ -4,7 +4,7 @@
   align-items: center;
   gap: 2rem;
   padding: 1rem;
-  background-color: var(--clr-grey-3);
+  background-color: var(--clr-black-2);
 }
 .checkoutHeader {
   font-size: 2rem;
