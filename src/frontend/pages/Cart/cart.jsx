@@ -3,37 +3,48 @@ import CartCard from "../../components/Cart/cartCard";
 import { OrderDetails } from "../../components/Order/orderDetails";
 import { useCartContext } from "../../context";
 import styles from "./cart.module.css";
+import Spinner from "../../components/spinner/spinner";
 
 export default function Cart() {
   const navigate = useNavigate();
-  const { cartState } = useCartContext();
+  const { cartState, loading } = useCartContext();
   const cartItems = cartState?.cart;
   // console.log(cartState?.cart);
+  // console.log(loading);
 
   return (
     <div className={styles.cartPage}>
-      <div className={styles.cartHeader}>
-        {" "}
-        <h2>Total Cart Items : {cartItems.length}</h2>{" "}
-      </div>
-      {cartItems.length === 0 ? (
-        <button
-          onClick={() => {
-            navigate("/products");
-          }}
-          className={styles.cartPageBtn}
-        >
-          Back To Home
-        </button>
-      ) : (
-        <div className={styles.cartContainer}>
-          <div className={styles.cartCardContainer}>
-            {cartItems.map((data) => (
-              <CartCard product={data} key={data.id} />
-            ))}
-          </div>
-          <OrderDetails />
+      {loading ? (
+        <div className={styles.spinner}>
+          {" "}
+          <Spinner />
         </div>
+      ) : (
+        <>
+          <div className={styles.cartHeader}>
+            {" "}
+            <h2>Total Cart Items : {cartItems.length}</h2>{" "}
+          </div>
+          {cartItems.length === 0 ? (
+            <button
+              onClick={() => {
+                navigate("/products");
+              }}
+              className={styles.cartPageBtn}
+            >
+              Back To Home
+            </button>
+          ) : (
+            <div className={styles.cartContainer}>
+              <div className={styles.cartCardContainer}>
+                {cartItems.map((data) => (
+                  <CartCard product={data} key={data.id} />
+                ))}
+              </div>
+              <OrderDetails />
+            </div>
+          )}
+        </>
       )}
     </div>
   );
