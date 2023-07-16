@@ -1,12 +1,11 @@
 .cartPage {
   display: flex;
-  /* margin: 1rem; */
   min-height: 67vh;
   gap: 1rem;
   align-items: center;
   flex-direction: column;
   padding: 1rem 2rem;
-  background-color: var(--clr-grey-3);
+  background-color: var(--clr-black-2);
   box-shadow: var(--dark-shadow);
 }
 
@@ -40,4 +39,11 @@
 
 .cartPageBtn:hover {
   background-color: var(--clr-primary-1);
+}
+
+.spinner {
+  height: 67vh;
+  align-content: center;
+  display: flex;
+  justify-content: center;
 }
