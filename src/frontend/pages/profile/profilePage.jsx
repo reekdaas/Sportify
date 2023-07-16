@@ -14,7 +14,7 @@ export default function ProfilePage() {
             to="/profile"
             className={
               isLinkActive
-                ? `link-active ${styles.profilePageNavlinkItem} `
+                ? `${styles.linkActive} ${styles.profilePageNavlinkItem} `
                 : `${styles.profilePageNavlinkItem}`
             }
           >
@@ -24,7 +24,7 @@ export default function ProfilePage() {
             to="useraddress"
             className={({ isActive }) =>
               isActive
-                ? `link-active ${styles.profilePageNavlinkItem} `
+                ? `${styles.linkActive} ${styles.profilePageNavlinkItem} `
                 : `${styles.profilePageNavlinkItem}`
             }
           >

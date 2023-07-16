@@ -4,7 +4,7 @@
   align-items: center;
   padding: 2rem;
   min-height: 80vh;
-  background-color: var(--clr-grey-3);
+  background-color: var(--clr-black-2);
 }
 
 .profilePageContainer {
@@ -12,21 +12,22 @@
   border-radius: 1rem;
   margin: 1rem auto;
   max-width: 40rem;
-  background-color: var(--clr-grey-9);
+  background-color: var(--clr-grey-2);
   width: 100%;
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
   box-shadow: var(--dark-shadow);
+  color: var(--clr-gray-1);
 }
 
 .profilePageNavlink {
   display: flex;
   width: 100%;
-
   border-radius: 4px;
   justify-content: space-around;
-  border: 2px solid var(--clr-grey-2);
+  border: 2px solid var(--clr-black-2);
+  color: var(--clr-gray-1);
 }
 
 .navlinkitemHeader {
@@ -36,9 +37,8 @@
   padding: 0.75rem 1.5rem;
   font-weight: 600;
   width: 100%;
-
   cursor: pointer;
-  color: #010;
+  color: var(--clr-gray-1);
 }
 
 .profilePageNavlinkItem {
@@ -49,4 +49,11 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color);
+}
+
+.linkActive {
+  background-color: #455eb5;
+}
+.linkActive > span {
+  color: #fff;
 }
