@@ -1,3 +1,5 @@
+import { toast } from "react-hot-toast";
+
 export const initialFormData = {
   street: "",
   state: "",
@@ -31,13 +33,14 @@ export function addressReducer(state, { type, payload }) {
       return { ...state, isModalOpen: payload };
     }
     case "ADD_ADDRESS": {
+      // toast.success("Address added sucessfully!");
       return { ...state, addressList: [...state.addressList, { ...payload }] };
     }
     case "REMOVE_ADDRESS": {
       const newaddressList = state?.addressList.filter(
         ({ _id }) => _id !== payload
       );
-
+      toast.success("Address removed sucessfully!");
       return { ...state, addressList: newaddressList };
     }
 
@@ -45,7 +48,8 @@ export function addressReducer(state, { type, payload }) {
       const addressEdited = state?.addressList.find(
         ({ _id }) => _id === payload
       );
-      console.log(addressEdited);
+      // console.log(addressEdited);
+
       return { ...state, addressForm: addressEdited };
     }
 
@@ -61,6 +65,7 @@ export function addressReducer(state, { type, payload }) {
         payload._id === data._id ? { ...data, ...payload } : data
       );
       // console.log(payload);
+      toast.success("Address updated sucessfully!");
       return { ...state, addressList: addressData };
     }
     case "CLEAR_FORM": {
