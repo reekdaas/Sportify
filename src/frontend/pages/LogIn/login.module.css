@@ -1,12 +1,13 @@
 .authPage {
   display: grid;
-  height: 66vh;
-
+  min-height: 66vh;
   place-items: center;
+  background-color: var(--clr-black-1);
 }
 
 .authLogIn {
   border: 1px solid rgb(207, 207, 207);
+  border-radius: 3%;
   width: 25rem;
   padding: 2rem;
   display: flex;
@@ -15,9 +16,12 @@
   gap: 1.5rem;
   align-items: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  background-color: var(--clr-grey-8);
+  background-color: var(--clr-black-2);
   max-width: 40rem;
   font-weight: 700;
+  color: var(--clr-gray-1);
+  margin: 2rem 0;
+  font-weight: 800;
 }
 
 .formPage {
@@ -52,4 +56,37 @@
 
 .signBtn:hover {
   background-color: var(--clr-primary-1);
+}
+
+.formPage input {
+  background-color: inherit;
+  border: 2px solid var(--clr-gray-1);
+  border-radius: 2%;
+  color: #ffd;
+  font-weight: 800;
+}
+
+.formPage input:focus {
+  outline: none;
+}
+
+.authLogIn > p {
+  color: var(--clr-lighten-3);
+  cursor: pointer;
+  transition-property: opacity;
+  transition-delay: 200ms;
+  transition-duration: 200ms;
+  position: relative;
+  color: #86a0ff;
+  font-weight: 800;
+}
+
+.authLogIn > p:hover {
+  opacity: 0.8;
+}
+.authLogIn > p > span {
+  font-size: 1.2rem;
+  position: absolute;
+
+  color: #86a0ff;
 }

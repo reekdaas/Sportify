@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./login.module.css";
-import { logInService } from "../../services/authService/authServices";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { useAuthContext } from "../../context";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 const guestUserData = {
   email: "rittikdas@gmail.com",
   password: "adarshbalika",
 };
 
 export default function Login() {
-  const { token, setToken, setUserData } = useAuthContext();
   const navigate = useNavigate();
-  const location = useLocation();
+  const { userLogIn } = useAuthContext();
 
   const [logInData, setLogInData] = useState({
     email: "",
@@ -20,19 +20,16 @@ export default function Login() {
   const inputChangeHandler = (e) => {
     const { name, value } = e.target;
     setLogInData({ ...logInData, [name]: value });
-    // console.log(logInData);
   };
   const handleGuestSubmit = (e) => {
     e.preventDefault();
-
     setLogInData(guestUserData);
-    logInService(guestUserData, setToken, setUserData);
+    userLogIn(guestUserData);
   };
-  useEffect(() => {
-    if (token) {
-      navigate(location.state?.from?.pathname || "/");
-    }
-  }, [token]);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    userLogIn(logInData);
+  };
 
   return (
     <div className={styles.authPage}>
@@ -62,12 +59,28 @@ export default function Login() {
             <button
               className={styles.signBtn}
               type="button"
+              onClick={handleLogin}
+            >
+              Login
+            </button>
+            <button
+              className={styles.signBtn}
+              type="button"
               onClick={handleGuestSubmit}
             >
               Guest Login
             </button>
           </div>
         </form>
+
+        <p
+          onClick={() => {
+            navigate("/signin");
+          }}
+        >
+          {" "}
+          Create New Account <span>{<AiOutlineArrowRight />}</span>
+        </p>
       </div>
     </div>
   );
