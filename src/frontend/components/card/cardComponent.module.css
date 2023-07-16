@@ -86,7 +86,7 @@
   position: absolute;
   text-align: center;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   width: 80%;
   top: 50%;
@@ -96,7 +96,7 @@
   border-radius: 0.5rem;
   background-color: var(--clr-red-dark);
   color: #fff;
-
+  text-transform: uppercase;
   z-index: 100;
 }
 
