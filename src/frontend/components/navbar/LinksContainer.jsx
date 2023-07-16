@@ -11,7 +11,7 @@ import {
   useWishListContext,
 } from "../../context";
 
-export default function LinksContainer() {
+export default function NavbarLinks() {
   const { token } = useAuthContext();
   const {
     cartState: { cart },

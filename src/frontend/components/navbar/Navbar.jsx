@@ -1,7 +1,7 @@
 import styles from "./Navbar.module.css";
 import { BsSearch } from "react-icons/bs";
+import NavbarLinks from "./LinksContainer";
 import { Link, useNavigate } from "react-router-dom";
-import LinksContainer from "./LinksContainer";
 import { useFilterContext } from "../../context";
 import { useEffect, useState } from "react";
 
@@ -53,7 +53,7 @@ export default function Navbar() {
           </button>
         </form>
 
-        <LinksContainer />
+        <NavbarLinks />
       </main>
     </>
   );
