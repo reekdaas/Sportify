@@ -43,6 +43,7 @@ export default function getFilteredProducts(allProducts, filterState) {
   // return filtersByCategory(allProducts, filterState);
   // return filterByRatings(allProducts, filterState);
   // return sortByPrice(allProducts, filterState);
+  // ! use function composition to filter data depend on various inputs
 
   arrayOfFunctions.forEach(
     (currentFunction) =>
