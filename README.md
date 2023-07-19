@@ -7,11 +7,12 @@
 - Landing page
 - Product listing page
 - Single product page
-- Search product
+- Search product with debouncing
 - Filter and sort products
-- Cart managment
+- Cart management
 - Wishlist management
 - Address management
+- pagination
 - Checkout page
 - Order page
 - User profile page
