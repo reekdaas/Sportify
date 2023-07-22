@@ -13,7 +13,7 @@ export const products = [
     rating: 4,
 
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20220701/849978f27d335c2cc6cbb695323b691c.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690023023/Real_Madrid_Jersey_daqthi.webp",
     inStock: true,
     fastDelivery: true,
     categoryName: "Jersey",
@@ -28,7 +28,7 @@ export const products = [
     rating: 3,
 
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20230414/08875f4dea59f3bfa48575cc03a96776.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690023023/Totenhum_Jersey_nahhes.webp",
     inStock: true,
     fastDelivery: false,
     categoryName: "Jersey",
@@ -43,7 +43,7 @@ export const products = [
     rating: 3.5,
 
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20230415/1e3c4f5eb00c1624017fe084d9ac45eb.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690023023/Barcelona_Jersey_dnhx7l.webp",
     inStock: true,
     fastDelivery: true,
     categoryName: "Jersey",
@@ -59,7 +59,7 @@ export const products = [
     rating: 3.9,
 
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20230522/1228f3d9ff9f351fb7c92801b25e08c8.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690023340/Manchester_city_jersey_roqk5r.webp",
     inStock: false,
     fastDelivery: false,
     categoryName: "Jersey",
@@ -74,7 +74,7 @@ export const products = [
     rating: 2.5,
 
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20220728/5dc7c0fc2ed64ec21683070691f0c21b.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690023340/Chelsea_Jerse_sgiai1.webp",
     inStock: true,
     fastDelivery: true,
     categoryName: "Jersey",
@@ -89,7 +89,7 @@ export const products = [
     rating: 1.5,
 
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20230513/ce7eb9610f50416650681256138a783b.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690023340/juventus_jersey_a6wxmo.webp",
     inStock: true,
     fastDelivery: true,
     categoryName: "Jersey",
@@ -104,7 +104,7 @@ export const products = [
     // discountPercentage: 12.9,
     rating: 2.5,
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20230129/b24eaa6ccba0d71e896c8eb612825198.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690023573/a.c_milan_jersey_pgz3lj.webp",
     inStock: true,
     fastDelivery: false,
     categoryName: "Jersey",
@@ -119,7 +119,7 @@ export const products = [
     rating: 3,
 
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20230504/74430a8eaf11f2a232c1d4ce92ef9a6b.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690023573/Inter_Milan_Jersey_yakwad.webp",
     inStock: false,
     fastDelivery: true,
     categoryName: "Jersey",
@@ -134,7 +134,7 @@ export const products = [
     rating: 4,
 
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20220530/d7244f2e1dda44388b3e997819b8fa51.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690023573/Bayern_Munich_Jersey_lr553o.webp",
     inStock: true,
     fastDelivery: true,
     categoryName: "Jersey",
@@ -149,7 +149,22 @@ export const products = [
     rating: 4.2,
 
     images:
-      "https://cf.projerseyshop.cc/upload/ttmall/img/20220819/a3d58aedef1db03e5c52e9e50bb77d0c.png=z-0,0_f-webp",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024146/boursia_jersey_r5d9o7.webp",
+    inStock: false,
+    fastDelivery: true,
+    categoryName: "Jersey",
+    isFeatured: false,
+  },
+  {
+    _id: "51MN9ERXEB887B0",
+    title: "MANCHESTER UNITED JERSEY",
+    description: "",
+    price: 349,
+    // discountPercentage: 12.9,
+    rating: 4,
+
+    images:
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690025417/man_u_jersey_nw0jgg.jpg",
     inStock: false,
     fastDelivery: true,
     categoryName: "Jersey",
@@ -163,7 +178,7 @@ export const products = [
     // discountPercentage: 12.9,
     rating: 3,
     images:
-      "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/b2ae5ecec3df4a6aa4c0ad2b01292981_9366/real-madrid-21-22-home-shorts.jpg",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024145/real-madrid-21-22-home-shorts_iiqnqr.jpg",
     inStock: true,
     fastDelivery: false,
     categoryName: "Shorts",
@@ -177,7 +192,7 @@ export const products = [
     // discountPercentage: 12.9,
     rating: 3,
     images:
-      "https://images.footballfanatics.com/borussia-dortmund/borussia-dortmund-away-shorts-2022-23_ss4_p-13311874+u-16u2caw98y6wpt36gtqi+v-b77f44d6227643bdbf1590c67d3432c0.jpg?_hv=2&w=340",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024145/boursia_dortmound_shorts_mphscy.jpg",
     inStock: true,
     fastDelivery: true,
     categoryName: "Shorts",
@@ -191,7 +206,8 @@ export const products = [
     price: 199,
     // discountPercentage: 12.9,
     rating: 3,
-    images: "https://m.media-amazon.com/images/I/610Yt8ZQgGL._AC_UX679_.jpg",
+    images:
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024145/Juv_Shorts_a8qg7z.jpg",
     inStock: true,
     fastDelivery: true,
     categoryName: "Shorts",
@@ -205,7 +221,7 @@ export const products = [
     // discountPercentage: 12.9,
     rating: 3,
     images:
-      "https://m.media-amazon.com/images/I/61zLjFGwnwL._AC_UL600_FMwebp_QL65_.jpg",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024640/barcelona_jersey_z3gdoq.webp",
     inStock: false,
     fastDelivery: true,
     categoryName: "Shorts",
@@ -218,7 +234,34 @@ export const products = [
     price: 99,
     // discountPercentage: 12.9,
     rating: 2,
-    images: "https://m.media-amazon.com/images/I/61u+gGNU1NL._AC_UX679_.jpg",
+    images:
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024640/Manc_jersey_a1tx6i.jpg",
+    fastDelivery: true,
+    categoryName: "Shorts",
+    isFeatured: false,
+  },
+  {
+    _id: "IXE96EQ0F6DTQWX",
+    title: "MANCHESTER UNITED SHORTS",
+    description: "",
+    price: 199,
+    // discountPercentage: 12.9,
+    rating: 3,
+    images:
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690025416/man_u_shorts_ae5vrj.jpg",
+    fastDelivery: true,
+    categoryName: "Shorts",
+    isFeatured: false,
+  },
+  {
+    _id: "IXE78EQ0F6DTQWX",
+    title: "INTER MILAN SHORTS",
+    description: "",
+    price: 249,
+    // discountPercentage: 12.9,
+    rating: 3.5,
+    images:
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690025416/inter_milan_shorts_xttfmv.jpg",
     fastDelivery: true,
     categoryName: "Shorts",
     isFeatured: false,
@@ -230,7 +273,8 @@ export const products = [
     price: 299,
     // discountPercentage: 12.9,
     rating: 3,
-    images: "https://m.media-amazon.com/images/I/81J40YB9IcL._AC_SX679_.jpg",
+    images:
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024640/Juventus_football_owtsjp.jpg",
     inStock: true,
     fastDelivery: false,
     categoryName: "Football",
@@ -245,7 +289,7 @@ export const products = [
     // discountPercentage: 12.9,
     rating: 4,
     images:
-      "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTNkuou2E-lCCMbU_QcEc4YRevNclG9qxfkHqgfmRXMPKR43mo_QMNFTGG5eSofpe9QBELDDBW4Tke1UmrvGgYv8c82IFbImPofn8sg3as",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024640/RM_ball_sn1g8z.jpg",
     inStock: true,
     fastDelivery: true,
     categoryName: "Football",
@@ -259,7 +303,7 @@ export const products = [
     // discountPercentage: 12.9,
     rating: 3,
     images:
-      "https://shop.mancity.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog-MAN/default/dwb379b367/images/large/701225927001_pp_01_mcfc.png?sw=1600&sh=1600&sm=fit",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024641/man_c_football_kl0du9.png",
     inStock: false,
     fastDelivery: false,
     categoryName: "Football",
@@ -273,7 +317,7 @@ export const products = [
     // discountPercentage: 12.9,
     rating: 2,
     images:
-      "https://m.media-amazon.com/images/I/21mQKDlPnML._AC_UL450_FMwebp_QL65_.jpg",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024989/bayern_munich_wg4e5z.jpg",
     inStock: true,
     fastDelivery: true,
     categoryName: "Football",
@@ -287,7 +331,21 @@ export const products = [
     // discountPercentage: 12.9,
     rating: 3,
     images:
-      "https://m.media-amazon.com/images/I/7102z3u7XML._AC_UL600_FMwebp_QL65_.jpg",
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690024989/barcelona_gtus8s.webp",
+    inStock: true,
+    fastDelivery: false,
+    categoryName: "Football",
+    isFeatured: false,
+  },
+  {
+    _id: "K7KADVXYGTR7M37",
+    title: "MANCHESTER UNITED FOOTBALL",
+    description: "",
+    price: 149,
+    // discountPercentage: 12.9,
+    rating: 3.3,
+    images:
+      "https://res.cloudinary.com/dqz5b6jq9/image/upload/v1690025417/man_u_ball_tes1lo.jpg",
     inStock: true,
     fastDelivery: false,
     categoryName: "Football",
