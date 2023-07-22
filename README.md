@@ -2,7 +2,7 @@
 
 [SporTiFy](https://sportify-onlysports.netlify.app/) An Ecommerce website for sporting merchandise.
 
-## Features
+## Features:
 
 - Landing page
 - Product listing page
@@ -24,7 +24,7 @@
 - Error page
 - Loaders and Toast
 
-## Technologies Used
+## Technologies Used:
 
 - React Js
 - React context for state management
