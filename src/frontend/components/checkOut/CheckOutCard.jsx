@@ -98,10 +98,6 @@ export default function CheckOutCard() {
         <h1>Order List:</h1>
       </div>
       <div className={styles.orderListDetails}>
-        <div className={styles.containerRow}>
-          <p>Item List:</p>
-          <p>Qty</p>
-        </div>
         <div className={`${styles.containerRow}`}>
           <p>Total Items:</p>
           <p>{totalItems}</p>
